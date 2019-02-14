@@ -5,7 +5,10 @@ import android.app.Application;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class NotPaid implements Application.ActivityLifecycleCallbacks {
 
@@ -19,6 +22,15 @@ public class NotPaid implements Application.ActivityLifecycleCallbacks {
     this.mDueDate = dueDate;
     this.mDaysDeadline = daysDeadline;
     application.registerActivityLifecycleCallbacks(this);
+  }
+
+  public static void init(Application application, String dueDate, int daysDeadline) {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+    try {
+      init(application, sdf.parse(dueDate), daysDeadline);
+    } catch (ParseException e) {
+      e.printStackTrace();
+    }
   }
 
   public static void init(Application application, Date dueDate, int daysDeadline) {
