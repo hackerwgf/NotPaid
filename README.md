@@ -4,7 +4,7 @@ Add opacity to Activity and decrease it every day until their app completely fad
 ## Dependency
 ```gradle
 dependencies {
-    implementation 'com.github.hackerwgf:notpaid:1.0.0'
+    implementation 'com.github.hackerwgf:notpaid:1.0.1'
 }
 ```
 
