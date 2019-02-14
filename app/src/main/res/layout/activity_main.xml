@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:id="@+id/dueDateTv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:text="2019-02-14"
+      />
+
+  <Button
+      android:id="@+id/dueDateBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="set due date"
+      />
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAYS DEADLINE: "
+        />
+
+    <EditText
+        android:id="@+id/daysDeadlineEt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:singleLine="true"
+        />
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/killBtn"
+      android:layout_width="wrap_content"
+      android:layout_marginTop="48dp"
+      android:layout_height="wrap_content"
+      android:text="KILL APP"
+      />
+
+</LinearLayout>
